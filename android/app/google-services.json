@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "915063154856",
+    "project_id": "notification-app-67cc9",
+    "storage_bucket": "notification-app-67cc9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915063154856:android:8561b664c05353486bba9d",
+        "android_client_info": {
+          "package_name": "com.gabrielfrancelino.notificationapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsa1pLaqQlDm04bJvj3raCNVx9y6bO8Y8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
