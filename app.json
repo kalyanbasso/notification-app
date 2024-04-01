@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.gabrielfrancelino.notificationapp"
@@ -34,5 +32,10 @@
         "projectId": "e861693b-0914-4a9b-8684-2181698ef56d"
       }
     }
-  }
+  },
+  "plugins": [
+    "@react-native-firebase/app",
+    "@react-native-firebase/perf",
+    "@react-native-firebase/craslytics"
+  ]
 }

@@ -9,13 +9,17 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-native-firebase/app": "^19.1.1",
+    "@react-native-firebase/crashlytics": "^19.1.1",
+    "@react-native-firebase/perf": "^19.1.1",
     "expo": "~50.0.14",
+    "expo-constants": "~15.4.5",
+    "expo-dev-client": "~3.3.11",
+    "expo-device": "~5.9.3",
+    "expo-notifications": "~0.27.6",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
-    "react-native": "0.73.6",
-    "expo-notifications": "~0.27.6",
-    "expo-device": "~5.9.3",
-    "expo-constants": "~15.4.5"
+    "react-native": "0.73.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
