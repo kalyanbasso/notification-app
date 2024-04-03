@@ -22,7 +22,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.gabrielfrancelino.notificationapp",
-      "googleServicesFile": "./android/app/google-services.json"
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -31,11 +31,11 @@
       "eas": {
         "projectId": "e861693b-0914-4a9b-8684-2181698ef56d"
       }
-    }
-  },
-  "plugins": [
-    "@react-native-firebase/app",
-    "@react-native-firebase/perf",
-    "@react-native-firebase/craslytics"
-  ]
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/perf",
+      "@react-native-firebase/crashlytics"
+    ]
+  }
 }
