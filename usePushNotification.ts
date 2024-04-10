@@ -11,6 +11,17 @@ export type PushNotificationState = {
   notification?: Notifications.Notification;
 };
 
+async function schedulePushNotification() {
+  await Notifications.scheduleNotificationAsync({
+    content: {
+      title: "You've got mail! 📬",
+      body: "Here is the notification body",
+      data: { data: "goes here" },
+    },
+    trigger: { seconds: 2 },
+  });
+}
+
 export function usePushNotifications(): PushNotificationState {
   Notifications.setNotificationHandler({
     handleNotification: async () => ({
@@ -80,6 +91,8 @@ export function usePushNotifications(): PushNotificationState {
       Notifications.addNotificationResponseReceivedListener((response) => {
         console.log(response);
       });
+
+    schedulePushNotification();
 
     return () => {
       Notifications.removeNotificationSubscription(
