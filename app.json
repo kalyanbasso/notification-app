@@ -33,9 +33,20 @@
       }
     },
     "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon2.png",
+          "color": "#000000",
+          "androidMode": "default",
+          "androidCollapsedTitle": "My App",
+          "androidCollapsedBody": "New notifications"
+        }
+      ],
       "@react-native-firebase/app",
       "@react-native-firebase/perf",
-      "@react-native-firebase/crashlytics"
+      "@react-native-firebase/crashlytics",
+      "@react-native-firebase/messaging"
     ]
   }
 }
