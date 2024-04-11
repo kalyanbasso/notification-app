@@ -13,7 +13,6 @@ export function AnalyticsPoc() {
       .then(() => {
         console.log("event logged successfully");
       });
-    console.log("Button pressed");
   }
 
   return (

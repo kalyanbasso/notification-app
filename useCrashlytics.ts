@@ -4,7 +4,6 @@ import { useEffect } from "react";
 export function useCrashlytics() {
   useEffect(() => {
     crashlytics().setCrashlyticsCollectionEnabled(true);
-    console.log(crashlytics().isCrashlyticsCollectionEnabled);
     console.log("Crashlytics enabled");
   }, []);
 

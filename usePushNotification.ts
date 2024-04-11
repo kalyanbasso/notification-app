@@ -77,9 +77,7 @@ export function usePushNotifications(): PushNotificationState {
       });
 
     responseListener.current =
-      Notifications.addNotificationResponseReceivedListener((response) => {
-        console.log(response);
-      });
+      Notifications.addNotificationResponseReceivedListener(() => {});
 
     return () => {
       Notifications.removeNotificationSubscription(
