@@ -1,21 +1,24 @@
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { usePushNotifications } from "../../../usePushNotification";
+import { useFcmPushNotification } from "../../../useFcmPusNotification";
 
 export function PushNotificationPoc() {
   const { expoPushToken, notification } = usePushNotifications();
 
+  const { deviceToken } = useFcmPushNotification();
+
   const data = JSON.stringify(notification?.request.content, null, 2);
 
-  console.log("expoPushToken", expoPushToken);
+  console.log("expoPushToken: ", expoPushToken);
+  console.log("deviceToken: ", deviceToken);
 
   return (
     <View style={styles.container}>
       <Text>Push Notification POC</Text>
 
       <Text>Expo Push Token: {expoPushToken?.data}</Text>
-      <Text>{data}</Text>
-
-      <Button title="Send Push Notification" onPress={() => {}} />
+      <Text>Firebase Cloud Messaging Token: {deviceToken}</Text>
+      <Text>{data ? data : "Ainda não recebeu notificação"}</Text>
     </View>
   );
 }
