@@ -11,17 +11,6 @@ export type PushNotificationState = {
   notification?: Notifications.Notification;
 };
 
-async function schedulePushNotification() {
-  await Notifications.scheduleNotificationAsync({
-    content: {
-      title: "You've got mail! 📬",
-      body: "Here is the notification body",
-      data: { data: "goes here" },
-    },
-    trigger: { seconds: 2 },
-  });
-}
-
 export function usePushNotifications(): PushNotificationState {
   Notifications.setNotificationHandler({
     handleNotification: async () => ({
@@ -43,7 +32,7 @@ export function usePushNotifications(): PushNotificationState {
   const responseListener = useRef<Notifications.Subscription>();
 
   async function registerForPushNotificationsAsync() {
-    let token;
+    let expoPushToken;
     if (Device.isDevice) {
       const { status: existingStatus } =
         await Notifications.getPermissionsAsync();
@@ -58,7 +47,7 @@ export function usePushNotifications(): PushNotificationState {
         return;
       }
 
-      token = await Notifications.getExpoPushTokenAsync({
+      expoPushToken = await Notifications.getExpoPushTokenAsync({
         projectId: Constants.expoConfig?.extra?.eas.projectId,
       });
     } else {
@@ -74,7 +63,7 @@ export function usePushNotifications(): PushNotificationState {
       });
     }
 
-    return token;
+    return expoPushToken;
   }
 
   useEffect(() => {
@@ -91,8 +80,6 @@ export function usePushNotifications(): PushNotificationState {
       Notifications.addNotificationResponseReceivedListener((response) => {
         console.log(response);
       });
-
-    schedulePushNotification();
 
     return () => {
       Notifications.removeNotificationSubscription(
