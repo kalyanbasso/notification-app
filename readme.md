@@ -13,7 +13,7 @@ O aplicativo POC, um projeto React Native criado com Expo que demonstra diversas
 
 ### Instalação:
 
-- Clone este repositório: git clone https://github.com/seu-nome-de-usuario/poc.git
+- Clone este repositório: git clone https://github.com/kalyanbasso/notification-app.git
 - Navegue para o diretório do projeto: `cd poc`
 - Instale as dependências: `npm install` (ou `yarn install`)
 
